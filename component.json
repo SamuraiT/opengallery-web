@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "components/jquery": "^2.1",
+    "jashkenas/backbone": "^1.1",
+    "jashkenas/underscore": "*"
+  },
+  "json": ["config.json"],
+  "scripts": [
+    "js/index.js"
+  ],
+  "main": "js/index.js",
+  "private": true
+}

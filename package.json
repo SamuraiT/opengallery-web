@@ -1,0 +1,14 @@
+{
+  "name": "open-gallery-app",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "component": "~1.0.0-rc5"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "author": "Tomoya Shimaguchi",
+  "license": "MIT"
+}

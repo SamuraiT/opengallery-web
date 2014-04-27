@@ -1,3 +1,6 @@
 /assets/.sass-cache
 /assets/stylesheets
 .DS_Store
+/build
+/node_modules
+/components
