@@ -6,7 +6,11 @@
   },
   "json": ["config.json"],
   "scripts": [
-    "js/index.js"
+    "js/index.js",
+    "js/collections/exhibition.js",
+    "js/collections/gallery.js",
+    "js/models/exhibition.js",
+    "js/models/gallery.js"
   ],
   "main": "js/index.js",
   "private": true
