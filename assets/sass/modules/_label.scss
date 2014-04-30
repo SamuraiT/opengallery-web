@@ -1,0 +1,22 @@
+%label {
+  display: inline;
+  padding: 6px 10px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  font-size: 80%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.label-alert {
+  @extend %label;
+  @extend %gothic;
+  background-color: $label-alert;
+}
+
+.label-note {
+  @extend %label;
+  @extend %gothic;
+  background-color: $label-note;
+}

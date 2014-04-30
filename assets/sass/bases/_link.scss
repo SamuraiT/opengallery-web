@@ -1,0 +1,32 @@
+
+@mixin create-link($col, $hover-col) {
+  @include transition(color 150ms);
+  &, &:visited {
+    color: $col;
+  }
+  &:hover {
+    color: $hover-col;
+  }
+}
+
+%link {
+  @include create-link(inherit, $gray);
+}
+
+%noline {
+  @include create-link(#1c1c4a, $gray);
+  &, &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a {
+  @extend %link;
+}
+
+.noline {
+  @extend %noline;
+}
