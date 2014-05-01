@@ -1,0 +1,70 @@
+
+@include with-layout(10 0) {
+  .header {
+    position: relative;
+    width: 100%;
+    @include trailer(3);
+  }
+
+  .header-calendar {
+    display: block;
+    @include container;
+    border: {
+      top: 1px solid $light;
+      bottom: 1px solid $light;
+    }
+  }
+
+  .header-calendar-month,
+  .header-calendar-day {
+    @extend %gothic;
+    font-size: 26px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .header-calendar-month {
+    @include span(2);
+    text-align: right;
+    span {
+      margin-right: 14px;
+    }
+  }
+
+  .header-calendar-day li {
+    @include span(1);
+
+    text-align: center;
+    border-right: 1px solid $light;
+    cursor: pointer;
+    position: relative;
+    color: $light;
+    &:first-child {
+      border-left: 1px solid $light;
+    }
+    &:hover {
+      background-color: lighten($well, 6%);
+    }
+    &.selected {
+      color: $dark;
+      background-color: $well;
+      cursor: default;
+    }
+  }
+
+  .header-date {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid $light;
+    background: $well;
+    @include padding-leader();
+    h2 {
+      @include span(6);
+      @extend %gothic;
+      margin-left: span(1.5);
+      font-size: 50px;
+    }
+  }
+}
+
