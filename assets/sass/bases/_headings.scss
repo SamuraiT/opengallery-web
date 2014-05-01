@@ -1,5 +1,6 @@
 %h1 {
-  // @include padding-trailer(1);
-  text-align: center;
+  @extend %serif;
+  @include padding-leader(.6);
+  @include padding-trailer(1);
+  font-size: 200%;
 }
-

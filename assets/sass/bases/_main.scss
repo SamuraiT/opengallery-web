@@ -1,7 +1,7 @@
-
 .main {
-  width: 900px;
   margin: 0 auto;
+  width: 900px;
+  position: relative;
 }
 
 .ex-list {
@@ -16,10 +16,37 @@
   &:last-child {
     border-bottom: none;
   }
-  &:hover {
+  &:hover, &.selected {
     background-color: #b2f3f1;
   }
+  &.selected {
+    .exl-gallery-name:after,
+    .exl-gallery-name:before {
+      left: 100%;
+      margin-left: -6px;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .exl-gallery-name:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-right-color: white;
+      border-width: 11px;
+      margin-top: -11px;
+    }
+    .exl-gallery-name:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-right-color: black;
+      border-width: 10px;
+      margin-top: -10px;
+    }
+  }
 }
+
 
 .exl-label {
   @include span(1.6);
@@ -37,10 +64,83 @@
   color: $black;
   font-weight: 600;
   font-size: 104%;
+  position: relative;
 }
 
 .exl-title {
   @extend %serif;
   @include span(7.4);
   font-size: 96%;
+}
+
+.ex-details {
+  display: none;
+  &.active {
+    display: block;
+  }
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: span(7.4);
+  padding: {
+    left: gutter() * 2;
+    //right: gutter();
+    //left: gutter();
+  }
+
+  box-shadow: -10px 0 10px -8px #9d9d9d;
+  background-color: white;
+  border-left: 1px solid $gray;
+  header {
+    h1 {
+      @extend %serif;
+      @include padding-leader(.6);
+      @include padding-trailer(.2);
+      font-size: 200%;
+      color: $dark;
+    }
+    time {
+      color: $gray;
+      font-weight: lighter;
+    }
+    @include padding-trailer(3);
+  }
+}
+
+.ex-details-description {
+  @include padding-trailer(6);
+}
+
+.ex-details-gallery {
+  @extend %well;
+  $gallery-grid: (
+    columns: 12,
+    gutters: .25,
+  );
+  @include layout($gallery-grid);
+
+  li {
+    @include container;
+    @include adjust-font-size-to(13px, 1);
+    span {
+      font-weight: bold;
+      @include span(3);
+    }
+    p {
+      @include span(8);
+    }
+  }
+}
+
+.short-details-header {
+  @include trailer(.4);
+}
+
+.ex-details-close {
+  position: absolute;
+  right: 6px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
 }
