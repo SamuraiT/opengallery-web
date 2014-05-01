@@ -1,6 +1,10 @@
 /assets/.sass-cache
+/assets/fonts
+/assets/html/fontcustom-preview.html
 /assets/stylesheets
 .DS_Store
 /build
 /node_modules
 /components
+/assets/sass/_fontcustom.scss
+.fontcustom-manifest.json

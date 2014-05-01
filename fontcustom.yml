@@ -1,0 +1,8 @@
+font_name: fontcustom
+input:
+  vectors: assets/vectors
+output:
+  fonts: assets/fonts
+  css: assets/sass
+  preview: assets/html
+templates: [ css, preview ]
