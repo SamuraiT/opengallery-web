@@ -31,15 +31,15 @@
   &:hover {
     .ex-item-head-title,
     .ex-item-title {
-      color: $accent-dark;
+      color: $selected-vivid;
     }
   }
-  &.selected, &.hover {
+  &.selected {
     .ex-item-head {
       background-color: $selected;
     }
     .ex-item-head-title {
-      color: $dark;
+      color: $selected-vivid;
     }
   }
   &.selected {
