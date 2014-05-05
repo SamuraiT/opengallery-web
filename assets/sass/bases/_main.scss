@@ -24,6 +24,7 @@
   @include adjust-font-size-to(20px, 3);
   border-bottom: 1px solid $light;
   cursor: pointer;
+  position: relative;
   &:last-child {
     border-bottom: none;
   }
@@ -41,6 +42,27 @@
       color: $dark;
     }
   }
+  &.selected {
+    .ex-item-arrow {
+      display: block;
+    }
+  }
+}
+
+.ex-item-arrow {
+  display: none;
+  right: -1px;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: white;
+  border-width: 12px;
+  margin-top: -12px;
 }
 
 .ex-item-head {
