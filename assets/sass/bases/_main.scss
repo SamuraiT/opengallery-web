@@ -1,123 +1,115 @@
+@include layout(12 .5 fluid after);
 .main {
-  margin: 0 auto;
-  width: 900px;
-  position: relative;
 }
 
 .ex-list {
-  @include clearfix;
+  width: 100%;
+  margin: 100px 0 0 0;
 }
 
-@include with-layout(12 .5 fluid split) {
-  .ex-item {
-    @include container;
-    @include adjust-font-size-to(18px, 3);
-    border-bottom: 1px solid $gray;
-    cursor: pointer;
-    &:last-child {
-      border-bottom: none;
-    }
-    &:hover {
-      background-color: lighten($selected, 6%);
-    }
-    &.selected {
-      cursor: default;
-      background-color: $selected;
-      .exl-gallery-name:after,
-      .exl-gallery-name:before {
-        left: 100%;
-        margin-left: -6px;
-        top: 50%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-      }
-      .exl-gallery-name:after {
-        border-color: rgba(136, 183, 213, 0);
-        border-right-color: white;
-        border-width: 11px;
-        margin-top: -11px;
-      }
-      .exl-gallery-name:before {
-        border-color: rgba(194, 225, 245, 0);
-        border-right-color: black;
-        border-width: 10px;
-        margin-top: -10px;
-      }
-    }
-  }
-
-
-  .exl-label {
-    @include span(1.6);
-    text-align: right;
-    .alert {
-      background-color: red;
-      color: white;
-      font-weight: bold;
-    }
-  }
-
-  .exl-gallery-name {
-    @include span(3);
-    @extend %gothic;
-    color: $black;
-    font-weight: 600;
-    font-size: 104%;
-    position: relative;
-  }
-
-  .exl-title {
-    @extend %serif;
-    @include span(7.4);
-    font-size: 96%;
-  }
-
-  .ex-details {
+.ex-list.shrink {
+  width: span(5);
+  border-right: 1px solid $light;
+  height: 100%;
+  .ex-item-title {
     display: none;
-    &.active {
-      display: block;
-    }
+  }
+  .ex-item-head {
+    @include span(12);
+  }
+}
 
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: span(7.4);
-    padding: {
-      left: gutter() * 2;
-      //right: gutter();
-      //left: gutter();
-    }
-
-    box-shadow: -10px 0 10px -8px #9d9d9d;
-    background-color: white;
-    border-left: 1px solid $light;
-    header {
-      h1 {
-        @extend %serif;
-        @include padding-leader(.6);
-        @include padding-trailer(.2);
-        font-size: 200%;
-        color: $dark;
-      }
-      time {
-        color: $gray;
-        font-weight: lighter;
-      }
-      @include padding-trailer(3);
+.ex-item {
+  @include container;
+  @include adjust-font-size-to(20px, 3);
+  border-bottom: 1px solid $light;
+  cursor: pointer;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    .ex-item-head-title,
+    .ex-item-title {
+      color: $accent-dark;
     }
   }
-
-  .ex-details-description {
-    @include padding-trailer(6);
+  &.selected, &.hover {
+    .ex-item-head {
+      background-color: $selected;
+    }
+    .ex-item-head-title {
+      color: $dark;
+    }
   }
+}
+
+.ex-item-head {
+  font-weight: 600;
+  font-size: 104%;
+  @include span(5);
+  @include container;
+}
+
+.ex-item-head-label {
+  @extend %gothic;
+  @include span(5);
+  text-align: right;
+  line-height: 3.2;
+}
+
+.ex-item-head-title {
+  @extend %gothic;
+  @include span(last 7);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ex-item-title {
+  @extend %serif;
+  @include span(last 7);
+  font-size: 96%;
+}
+
+.ex-content {
+  margin:{
+    top: 100px;
+    //bottom: 100px;
+    //right: 40px;
+    //left: 40px;
+  }
+  display: none;
+  &.active {
+    display: block;
+  }
+  width: span(7);
+  margin-left: span(5) + gutter();
+  background-color: white;
+  header {
+    position: relative;
+    h1 {
+      @extend %serif;
+      @include padding-leader(.6);
+      @include padding-trailer(.2);
+      font-size: 200%;
+      color: $dark;
+    }
+    time {
+      color: $gray;
+      font-weight: lighter;
+    }
+    @include padding-trailer(3);
+  }
+}
+
+.ex-content-body {
+  margin-right: gutter() * 2;
+  @include padding-trailer(3);
 }
 
 @include with-layout(12 .25) {
-  .ex-details-gallery {
+  .ex-content-aside {
+    margin-right: gutter() * 2;
+    margin-bottom: gutter();
     @extend %well;
     li {
       @include container;
@@ -137,9 +129,9 @@
   @include trailer(.4);
 }
 
-.ex-details-close {
+.ex-content-close {
   position: absolute;
-  right: 6px;
+  right: 20px;
   top: 20px;
   font-size: 30px;
   cursor: pointer;

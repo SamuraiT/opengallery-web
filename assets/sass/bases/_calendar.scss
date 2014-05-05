@@ -1,22 +1,24 @@
 
 @include with-layout(10 0) {
   .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-height;
     width: 100%;
-    @include trailer(3);
+    z-index: 100000;
+    background-color: #f1f8fb;
   }
 
   .header-calendar {
     display: block;
     @include container;
-    border: {
-      top: 1px solid $light;
-      bottom: 1px solid $light;
-    }
+    box-sizing: border-box;
   }
 
   .header-calendar-month,
   .header-calendar-day {
+    box-sizing: border-box;
     @extend %gothic;
     font-size: 26px;
     height: 40px;
@@ -53,17 +55,20 @@
   }
 
   .header-date {
+    box-sizing: border-box;
     width: 100%;
     height: 60px;
     line-height: 60px;
-    border-bottom: 1px solid $light;
+    border:{
+      top: 1px solid $light;
+      bottom: 1px solid $light;
+    }
     background: $well;
-    @include padding-leader();
     h2 {
       @include span(6);
       @extend %gothic;
       margin-left: span(1.5);
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 }
