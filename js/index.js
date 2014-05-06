@@ -15,26 +15,24 @@ Backbone.ajax = function(params) {
 
 var $main = $('main');
 var $content = $('.ex-content');
-var $body = $('body');
+var $doc = $(document);
 var $list = $('.ex-list');
-var scrollTop;
+var scrollTop = null;
 
 $main.on('click' ,'.ex-item:not(.selected)', function(e) {
-  $(e.currentTarget)
-    .siblings('.selected').removeClass('selected').end()
-    .addClass('selected');
+  if (scrollTop !== null) {
+    closeContent();
+  }
+
+  $(e.currentTarget).addClass('selected');
   $content.addClass('active');
 
-  var t = $body.scrollTop();
+  scrollTop = $doc.scrollTop();
   $list.css({
     position: 'fixed',
-    top: -t
+    top: -scrollTop
   }).addClass('shrink');
-
-  if (!scrollTop) {
-    scrollTop = t;
-  }
-  $body.scrollTop(0);
+  $doc.scrollTop(0);
 });
 
 $main.on('click', '.ex-item.selected', closeContent);
@@ -46,7 +44,7 @@ function closeContent() {
     position: '',
     top: ''
   }).removeClass('shrink');
-  $body.scrollTop(scrollTop);
+  $doc.scrollTop(scrollTop);
   scrollTop = null;
 }
 
