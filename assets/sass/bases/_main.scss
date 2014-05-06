@@ -4,13 +4,13 @@
 
 .ex-list {
   width: 100%;
-  margin: 100px 0 0 0;
+  padding: $list-top 0 0 0;
 }
 
 .ex-list.shrink {
   width: span(5);
   border-right: 1px solid $light;
-  height: 100%;
+  min-height: 100%;
   .ex-item-title {
     display: none;
   }
@@ -94,10 +94,7 @@
 
 .ex-content {
   margin:{
-    top: 100px;
-    //bottom: 100px;
-    //right: 40px;
-    //left: 40px;
+    top: $content-top;
   }
   display: none;
   &.active {

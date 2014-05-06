@@ -1,0 +1,57 @@
+$header-layout: (
+  columns: 12,
+  gutters: .5,
+  math: static,
+  flow: rtl,
+  column-width: 40px,
+  container-position: right,
+  gutter-position: inside,
+);
+
+@include with-layout($header-layout) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-height;
+    line-height: $header-height;
+    width: 100%;
+    z-index: 10000;
+    background-color: #404040;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+
+  .header-nav {
+    font-size: 30px;
+    @extend %gothic;
+    @include container;
+  }
+
+  %header-prev-next {
+    border: {
+      left: 1px solid black;
+      right: 1px solid black;
+    }
+    cursor: pointer;
+    &:hover {
+      background-color: #505050;
+    }
+  }
+
+  .header-nav-day {
+    @include span(5);
+  }
+
+  .header-nav-prev {
+    @extend %header-prev-next;
+    @include span(2);
+  }
+
+  .header-nav-next {
+    @extend %header-prev-next;
+    @include span(2);
+    margin-right: span(1);
+  }
+}
