@@ -1,13 +1,11 @@
 
 CM = node_modules/.bin/component
-JS_DEP = component.json \
-         $(shell cat component.json | jq  '.scripts[], .json[]'  | tr -d '"')
 
 .PHONY: build clean sass fontcustom
 
 build: build/build.js sass
 
-build/build.js: $(JS_DEP)
+build/build.js:
 	@$(CM) build --dev
 	@echo 'build component done'
 
