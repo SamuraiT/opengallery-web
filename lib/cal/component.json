@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "components/jquery": "^2",
+    "jashkenas/underscore": "*",
+    "moment/moment": "^2.6.0",
+    "jashkenas/backbone": "^1.1",
+    "component/reactive": "*"
+  },
+  "scripts": [
+    "index.js",
+    "collection.js"
+  ],
+  "templates": [
+    "template.html"
+  ]
+}

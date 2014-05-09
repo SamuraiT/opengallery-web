@@ -1,20 +1,5 @@
 {
-  "dependencies": {
-    "components/jquery": "^2.1",
-    "jashkenas/backbone": "^1.1",
-    "jashkenas/underscore": "*",
-    "moment/moment": "^2.6.0"
-  },
-  "json": [
-    "config.json"
-  ],
-  "scripts": [
-    "js/index.js",
-    "js/collections/exhibition.js",
-    "js/collections/gallery.js",
-    "js/models/exhibition.js",
-    "js/models/gallery.js"
-  ],
-  "main": "js/index.js",
+  "paths": ["lib"],
+  "locals": ["boot"],
   "private": true
 }
