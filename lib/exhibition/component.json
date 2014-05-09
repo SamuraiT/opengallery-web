@@ -2,7 +2,6 @@
   "dependencies": {
     "components/jquery": "^2.1",
     "jashkenas/underscore": "*",
-    "moment/moment": "^2.6.0",
     "jashkenas/backbone": "^1.1",
     "component/reactive": "*"
   },
