@@ -8,6 +8,10 @@
     "cal",
     "exhibition"
   ],
-  "scripts": ["index.js"],
+  "scripts": [
+    "index.js",
+    "model.js",
+    "collection.js"
+  ],
   "json": ["config.json"]
 }

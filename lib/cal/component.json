@@ -7,8 +7,7 @@
   },
   "locals": ["moment"],
   "scripts": [
-    "index.js",
-    "collection.js"
+    "index.js"
   ],
   "templates": [
     "template.html"

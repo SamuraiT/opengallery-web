@@ -1,102 +1,12 @@
 <ul class="ex-list">
-  <li class="ex-item">
+  <li each="exhibitions" class="ex-item {selected}" data-id="{_id}" data-gallery-id="{gallery_id}">
     <div class="ex-item-arrow"></div>
     <div class="ex-item-head">
       <div class="ex-item-head-label">
-        <span class="label-alert">最終日</span>
+        <span class="label-alert">label</span>
       </div>
-      <span class="ex-item-head-title">ヒラマ画廊</span>
+      <span class="ex-item-head-title">{gallery_id}</span>
     </div>
-    <div class="ex-item-title">高文連上川地区美術部展 前期</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">16日まで</span>
-      </div>
-      <span class="ex-item-head-title">遇里夢</span>
-    </div>
-    <div class="ex-item-title">旭川木版画　サークル展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">Cafe 花みずき</span>
-    </div>
-    <div class="ex-item-title">タニコシ　ナツコ　人形とぬいぐるみ展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">ギャラリーフォーカス</span>
-    </div>
-    <div class="ex-item-title">旭正写真愛好会６人展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">16日まで</span>
-      </div>
-      <span class="ex-item-head-title">遇里夢</span>
-    </div>
-    <div class="ex-item-title">旭川木版画　サークル展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">Cafe 花みずき</span>
-    </div>
-    <div class="ex-item-title">タニコシ　ナツコ　人形とぬいぐるみ展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">ギャラリーフォーカス</span>
-    </div>
-    <div class="ex-item-title">旭正写真愛好会６人展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">16日まで</span>
-      </div>
-      <span class="ex-item-head-title">遇里夢</span>
-    </div>
-    <div class="ex-item-title">旭川木版画　サークル展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">Cafe 花みずき</span>
-    </div>
-    <div class="ex-item-title">タニコシ　ナツコ　人形とぬいぐるみ展</div>
-  </li>
-  <li class="ex-item">
-    <div class="ex-item-arrow"></div>
-    <div class="ex-item-head">
-      <div class="ex-item-head-label">
-        <span class="label-note">17日まで</span>
-      </div>
-      <span class="ex-item-head-title">ギャラリーフォーカス</span>
-    </div>
-    <div class="ex-item-title">旭正写真愛好会６人展</div>
+    <div class="ex-item-title">{title}</div>
   </li>
 </ul>
