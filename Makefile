@@ -1,6 +1,7 @@
 
 CM = node_modules/.bin/component
-JS_DEP = $(shell find lib -type f -name '*.js')
+DEP = component.json $(shell find lib -type f)
+JS_DEP = $(filter %.js, $(DEP))
 
 .PHONY: build clean sass fontcustom lint
 
