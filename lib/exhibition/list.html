@@ -1,11 +1,11 @@
 <ul class="ex-list">
-  <li each="exhibitions" class="ex-item {selected}" data-id="{_id}" data-gallery-id="{gallery_id}">
+  <li each="exhibitions" class="ex-item {selected}" data-id="{_id}" data-gallery-id="{gallery.id}">
     <div class="ex-item-arrow"></div>
     <div class="ex-item-head">
       <div class="ex-item-head-label">
         <span class="label-alert">label</span>
       </div>
-      <span class="ex-item-head-title">{gallery_id}</span>
+      <span class="ex-item-head-title">{gallery.name}</span>
     </div>
     <div class="ex-item-title">{title}</div>
   </li>
