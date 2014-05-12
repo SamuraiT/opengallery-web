@@ -7,7 +7,7 @@ JS_DEP = $(filter %.js, $(DEP))
 
 build: build/build.js sass
 
-build/build.js: $(JS_DEP)
+build/build.js: $(DEP)
 	@$(CM) build --dev
 	@echo 'build component done'
 
