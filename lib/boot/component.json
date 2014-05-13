@@ -11,7 +11,8 @@
   "scripts": [
     "index.js",
     "model.js",
-    "collection.js"
+    "collection.js",
+    "gallery.js"
   ],
   "json": ["config.json"]
 }

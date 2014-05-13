@@ -130,6 +130,9 @@
     margin-right: gutter() * 2;
     margin-bottom: gutter();
     @extend %well;
+    &.hidden {
+      display: none;
+    }
     li {
       @include container;
       @include adjust-font-size-to(13px, 1);
