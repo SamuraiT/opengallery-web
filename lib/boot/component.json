@@ -2,7 +2,8 @@
   "dependencies": {
     "components/jquery": "^2.1",
     "jashkenas/underscore": "*",
-    "jashkenas/backbone": "^1.1"
+    "jashkenas/backbone": "^1.1",
+    "moment/moment": "*"
   },
   "locals": [
     "cal",
@@ -12,7 +13,8 @@
     "index.js",
     "model.js",
     "collection.js",
-    "gallery.js"
+    "gallery.js",
+    "router.js"
   ],
   "json": ["config.json"]
 }
