@@ -19,3 +19,10 @@
   @extend %gothic;
   background-color: $label-note;
 }
+
+.label-transparent {
+  @extend %label;
+  @extend %gothic;
+  color: $gray;
+  font-weight: lighter;
+}
