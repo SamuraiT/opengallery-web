@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2014-5-12: Created.
+-->
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Mon May 12 02:21:24 2014
+ By Tomoya Shimaguchi
+Created by Tomoya Shimaguchi with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="fontcustom" horiz-adv-x="512" >
+  <font-face 
+    font-family="fontcustom"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="-1.09863 -53.0986 503.099 445.098"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F100-F100"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" 
+d="M399.313 27.4727l21.2129 21.2139l-319.84 319.84l-21.2129 -21.2139zM53.5576 1.55664v388.886h394.885v-388.886h-394.885zM-1.09863 -53.0986h504.197v498.196h-504.197v-498.196zM79.4795 48.6924l21.2129 -21.2139l319.828 319.828l-21.2129 21.2139z" />
+  </font>
+</defs></svg>
