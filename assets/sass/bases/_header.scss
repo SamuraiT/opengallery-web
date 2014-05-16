@@ -22,15 +22,16 @@ $header-layout: (
     text-align: center;
     border-bottom: 1px solid $gray;
     h1 {
-      @extend %gothic;
+      @extend %sans;
       position: absolute;
       margin-left: 40px;
       padding: 0 20px;
-      height: 70px;
-      background: #404040;
-      transition: background-color 400ms linear;
+      font-size: 20px;
+      color: $light-gray;
+      transition: color 400ms linear;
+      cursor: pointer;
       &:hover {
-        background: #ff6a24;
+        color: #ff6a24;
       }
     }
   }
